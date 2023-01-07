@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="ma.projet.arrosageintellegentv2.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="Dashborad" />
+
+    <fragment
+        android:id="@+id/nav_profil"
+        android:name="ma.projet.arrosageintellegentv2.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="Informations Personnels" />
+    <fragment
+        android:id="@+id/nav_espacevert"
+        android:name="ma.projet.arrosageintellegentv2.ui.espacevert.EspacevertFragement"
+        android:label="fragment_espacevert"
+        tools:layout="Espaces Verts" />
+    <fragment
+        android:id="@+id/nav_plante"
+        android:name="ma.projet.arrosageintellegentv2.ui.plante.PlanteFragment"
+        android:label="fragment_plante"
+        tools:layout="Plantes" />
+</navigation>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+
+    >
+
+    <ImageView
+        android:id="@+id/id__photo"
+        android:layout_width="403dp"
+        android:layout_height="388dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/id__libelle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:gravity="center"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/id__superficie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:gravity="center"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/id__type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:gravity="center"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/id__idf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="TextView"
+        android:visibility="gone" />
+
+    <RadioGroup
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btn_plantages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="plantages"
+            android:layout_marginHorizontal="20dp"/>
+
+        <Button
+            android:id="@+id/btn_grandeurs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="grandeurs"
+            android:layout_marginHorizontal="20dp"/>
+    </RadioGroup>
+    <RadioGroup
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btn_installations"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="boitier"/>
+
+        <Button
+            android:id="@+id/btn_arrosages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="arrosages"
+            android:layout_marginHorizontal="20dp"/>
+    </RadioGroup>
+</LinearLayout><!---->

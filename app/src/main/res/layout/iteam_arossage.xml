@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="20dp"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/idA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="122dp"
+        android:text="TextView"
+        />
+
+
+    <TextView
+        android:id="@+id/idAdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/idA"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/idAlitresEau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/idA"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="40dp"
+
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/idAr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:text="Id :"
+        />
+
+
+    <TextView
+        android:id="@+id/idArdatedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/idAr"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:text="date :" />
+
+    <TextView
+        android:id="@+id/idArlitresEau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/idAr"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="40dp"
+
+        android:text="litresEau :" />
+
+
+</RelativeLayout>

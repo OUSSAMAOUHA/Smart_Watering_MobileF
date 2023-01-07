@@ -1,0 +1,96 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+            android:layout_marginTop="50dp"
+            android:id="@+id/gps"
+            android:layout_width="158dp"
+            android:layout_height="157dp"
+            android:layout_centerInParent="true"
+            android:elevation="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/usernameLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.531"
+            app:layout_constraintStart_toStartOf="parent"
+            app:lottie_autoPlay="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:lottie_rawRes="@raw/free"
+            tools:ignore="MissingConstraints"/>
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/usernameLayout"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/passwordLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:ignore="MissingConstraints">
+
+        <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="Username"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLayout"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usernameLayout"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#5f96b4"
+            tools:ignore="MissingConstraints">
+
+        <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="150dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="210dp"
+            android:text="Login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.518"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordLayout"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
