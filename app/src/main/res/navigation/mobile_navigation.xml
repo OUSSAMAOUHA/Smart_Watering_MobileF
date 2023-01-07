@@ -19,8 +19,9 @@
     <fragment
         android:id="@+id/nav_espacevert"
         android:name="ma.projet.arrosageintellegentv2.ui.espacevert.EspacevertFragement"
-        android:label="fragment_espacevert"
-        tools:layout="Espaces Verts" />
+        android:label="Farms"
+        tools:layout="Ferme" />
+
     <fragment
         android:id="@+id/nav_plante"
         android:name="ma.projet.arrosageintellegentv2.ui.plante.PlanteFragment"

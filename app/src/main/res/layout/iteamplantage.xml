@@ -6,84 +6,91 @@
     android:layout_width="match_parent" android:layout_height="wrap_content">
 
 
-    <TextView
-        android:id="@+id/idP"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="122dp"
-        android:text="TextView"
-        />
 
+        android:layout_marginTop="10dp">
 
-    <TextView
-        android:id="@+id/idPnombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/idP"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="20dp"
-        android:text="TextView" />
+        <TextView
+            android:id="@+id/idArlitresEau"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="4dp"
+            android:text="Date  :"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/idArdatedate" />
 
+        <TextView
+            android:id="@+id/idArdatedate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:text="@string/nombre"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            tools:layout_editor_absoluteY="16dp" />
 
+        <TextView
+            android:id="@+id/idPDzate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-    <TextView
-        android:id="@+id/idPDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/idP"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="40dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/plante"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/idArlitresEau" />
 
-        android:text="TextView" />
-    <TextView
-        android:id="@+id/idPplante"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/idP"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="60dp"
+        <TextView
+            android:id="@+id/idPDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-        android:text="TextView" />
+            android:text="TextView"
+            app:layout_constraintBottom_toTopOf="@+id/idPplante"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.46"
+            app:layout_constraintStart_toEndOf="@+id/idArlitresEau"
+            app:layout_constraintTop_toBottomOf="@+id/idPnombre" />
 
-    <TextView
-        android:id="@+id/idAr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="50dp"
-        android:text="Id :"
-        />
+        <TextView
+            android:id="@+id/idPplante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
+            android:layout_marginBottom="8dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.457"
+            app:layout_constraintStart_toEndOf="@+id/idPDzate"
+            app:layout_constraintTop_toBottomOf="@+id/idPDate"
+            app:layout_constraintVertical_bias="0.916" />
 
-    <TextView
-        android:id="@+id/idArdatedate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/idAr"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="20dp"
-        android:text="Nombre : :" />
+        <TextView
+            android:id="@+id/idPnombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.396"
+            app:layout_constraintStart_toEndOf="@+id/idArdatedate"
+            tools:layout_editor_absoluteY="14dp" />
 
-    <TextView
-        android:id="@+id/idArlitresEau"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/idAr"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="40dp"
-
-        android:text="Date  :" />
-
-    <TextView
-        android:id="@+id/idPDzate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/idAr"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="60dp"
-
-        android:text="Plante:" />
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="85dp"
+            android:layout_height="95dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </RelativeLayout>

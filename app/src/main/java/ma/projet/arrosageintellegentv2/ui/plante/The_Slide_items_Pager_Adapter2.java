@@ -1,25 +1,18 @@
 package ma.projet.arrosageintellegentv2.ui.plante;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.bumptech.glide.Glide;
-
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 import ma.projet.arrosageintellegentv2.R;
-import ma.projet.arrosageintellegentv2.beans.EspaceVert;
-import ma.projet.arrosageintellegentv2.beans.Plante;
 import ma.projet.arrosageintellegentv2.beans.TypePlante;
 
 public class The_Slide_items_Pager_Adapter2 extends PagerAdapter {

@@ -7,7 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,15 +67,21 @@ public class PlantageAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.iteamplantage, null);
 
 
-        TextView idP = convertView.findViewById(R.id.idP);
         TextView idPnombre = convertView.findViewById(R.id.idPnombre);
         TextView idPplante = convertView.findViewById(R.id.idPplante);
         TextView idPDate = convertView.findViewById(R.id.idPDate);
+        ImageView img = convertView.findViewById(R.id.imageView3);
 
-        idP.setText(objects.get(position).getId()+"");
-        idPnombre.setText( objects.get(position).getNombre()+"");
-        idPplante.setText(objects.get(position).getPlante()+"");
-        idPDate.setText(objects.get(position).getDate());
+        idPnombre.setText( objects.get(position).getPk().getNombre()+"");
+        idPplante.setText(objects.get(position).getPlante().getLibelle());
+        idPDate.setText(objects.get(position).getPk().getDate());
+        Glide
+                .with(convertView)
+                .asBitmap()
+                .load(objects.get(position).getPlante().getImage())
+                .centerCrop()
+                .apply(new RequestOptions().override(90, 90))
+                .into(img);
         return convertView;
     }
 

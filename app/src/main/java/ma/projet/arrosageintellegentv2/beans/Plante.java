@@ -1,7 +1,5 @@
 package ma.projet.arrosageintellegentv2.beans;
 
-import java.util.List;
-
 public class Plante {
     private long id;
     private String libelle;
@@ -59,12 +57,7 @@ public class Plante {
     public void setType(TypePlante type) {
         this.type = type;
     }
-////////////////
-    private TypePlante typeplante;
-    public TypePlante getTypeplante() {
-        return typeplante;
-    }
-//////////////////////
+
     public Plante(long id, String libelle, String image, String racine, TypePlante type) {
         this.id = id;
         this.libelle = libelle;

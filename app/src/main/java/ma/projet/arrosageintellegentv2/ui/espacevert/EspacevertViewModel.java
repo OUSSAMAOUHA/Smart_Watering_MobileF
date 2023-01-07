@@ -1,6 +1,7 @@
 package ma.projet.arrosageintellegentv2.ui.espacevert;
 
 import android.app.Application;
+import android.content.SharedPreferences;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -33,10 +34,14 @@ public class EspacevertViewModel extends AndroidViewModel {
     }
 
 
-    void init() {
+    public void init() {
+
+        SharedPreferences sharedPreferences = getApplication().getSharedPreferences("MY_SHARED_PREF", getApplication().MODE_PRIVATE);
+
+        int value = sharedPreferences.getInt("user_id", 0);
 
         ApiInterface apiInterface = ApiClient.getClient().create(ApiInterface.class);
-        Call<List<EspaceVert>> call = apiInterface.getespace("1");
+        Call<List<EspaceVert>> call = apiInterface.getespace(String.valueOf(value));
         call.enqueue(new Callback<List<EspaceVert>>() {
             @Override
             public void onResponse(Call call, Response response) {

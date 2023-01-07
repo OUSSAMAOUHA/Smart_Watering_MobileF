@@ -1,7 +1,6 @@
 package ma.projet.arrosageintellegentv2.ui.plante;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ma.projet.arrosageintellegentv2.R;
-import ma.projet.arrosageintellegentv2.beans.EspaceVert;
 import ma.projet.arrosageintellegentv2.beans.Plante;
 
 public class The_Slide_items_Pager_Adapter extends PagerAdapter {

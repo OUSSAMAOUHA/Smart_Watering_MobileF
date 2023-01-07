@@ -11,7 +11,6 @@ import androidx.lifecycle.MutableLiveData;
 import java.util.List;
 
 import ma.projet.arrosageintellegentv2.beans.Plante;
-import ma.projet.arrosageintellegentv2.beans.Parcelle;
 import ma.projet.arrosageintellegentv2.beans.TypePlante;
 import ma.projet.arrosageintellegentv2.networking.ApiClient;
 import ma.projet.arrosageintellegentv2.networking.ApiInterface;

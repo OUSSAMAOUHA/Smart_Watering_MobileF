@@ -1,49 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingTop="20dp"
     android:paddingBottom="20dp"
 
     >
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/id__photo"
-        android:layout_width="403dp"
-        android:layout_height="388dp"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
         android:layout_gravity="center_horizontal"
+        android:paddingStart="20dp"
         android:paddingBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/desc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+        tools:ignore="UnknownIdInLayout" />
 
     <TextView
         android:id="@+id/id__libelle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
+        android:layout_marginBottom="48dp"
         android:gravity="center"
-        android:text="TextView" />
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/btn_plantages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/id__superficie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="55dp"
         android:gravity="center"
-        android:text="TextView" />
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id__photo"
+        app:layout_constraintVertical_bias="0.0" />
+
 
     <TextView
         android:id="@+id/id__type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="56dp"
         android:gravity="center"
-        android:text="TextView" />
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id__photo" />
 
     <TextView
         android:id="@+id/id__idf"
@@ -51,56 +68,32 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="TextView"
-        android:visibility="gone" />
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="381dp" />
 
-    <RadioGroup
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
+    <Button
+
+        android:id="@+id/btn_plantages"
+        android:layout_width="134dp"
+        android:layout_height="137dp"
+        android:layout_marginHorizontal="150dp"
+        android:background="@drawable/circle"
+        android:gravity="center"
+        android:text="@string/plantages"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id__photo"
+        app:layout_constraintVertical_bias="0.799" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        >
+        app:layout_constraintGuide_begin="20dp" />
 
-        <Button
-            android:id="@+id/btn_plantages"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="plantages"
-            android:layout_marginHorizontal="20dp"/>
 
-        <Button
-            android:id="@+id/btn_grandeurs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="grandeurs"
-            android:layout_marginHorizontal="20dp"/>
-    </RadioGroup>
-    <RadioGroup
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-
-        <Button
-            android:id="@+id/btn_installations"
-            android:layout_width="122dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="boitier"/>
-
-        <Button
-            android:id="@+id/btn_arrosages"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="arrosages"
-            android:layout_marginHorizontal="20dp"/>
-    </RadioGroup>
-</LinearLayout><!---->
+</androidx.constraintlayout.widget.ConstraintLayout>

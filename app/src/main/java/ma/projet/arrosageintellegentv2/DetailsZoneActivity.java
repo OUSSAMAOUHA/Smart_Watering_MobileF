@@ -52,23 +52,15 @@ public class DetailsZoneActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        btn_installations=findViewById(R.id.btn_installations);
 
-        btn_grandeurs=findViewById(R.id.btn_grandeurs);
-
-
-
-        btn_arrosages=findViewById(R.id.btn_arrosages);
 
 
         Parcelle zones = EspacevertViewModel.getZoneDetails(espace_id, zone_id);
 
         Log.i(TAG, zones.toString());
         Log.i(TAG, zones.getLibelle());
-        Log.i(TAG, String.valueOf(zones.getType()));
         id__libelle.setText("Libelle   :"+zones.getLibelle());
         id__superficie.setText("Superficie :"+zones.getSuperficie() );
-        id__type.setText("type   :" +zones.getType() + "");
         Glide.with(this)
                 .load(zones.getImage()) // image url
                 .placeholder(R.drawable.ic_launcher_background) // any placeholder to load at start

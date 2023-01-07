@@ -21,7 +21,7 @@ public class Parcelle implements Serializable {
                 ", libelle='" + libelle + '\'' +
                 ", superficie=" + superficie +
                 ", image='" + image + '\'' +
-                ", type=" + type +
+
                 ", plantages=" + plantages +
                 '}';
     }
@@ -50,13 +50,7 @@ public class Parcelle implements Serializable {
         this.image = image;
     }
 
-    public SolType getType() {
-        return type;
-    }
 
-    public void setType(SolType type) {
-        this.type = type;
-    }
 
     public List<Plantage> getPlantages() {
         return plantages;
@@ -70,19 +64,17 @@ public class Parcelle implements Serializable {
 
 
 
-    public Parcelle(long id, String libelle, float superficie, String image, SolType type, List<Plantage> plantages) {
+    public Parcelle(long id, String libelle, float superficie, String image, List<Plantage> plantages) {
         this.id = id;
         this.libelle = libelle;
         this.superficie = superficie;
         this.image = image;
-        this.type = type;
         this.plantages = plantages;
     }
 
     private String libelle;
     private float superficie;
     private String image;
-    private SolType type;
     private List<Plantage> plantages;
 
 }

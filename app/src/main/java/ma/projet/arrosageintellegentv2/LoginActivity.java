@@ -73,7 +73,20 @@ public class LoginActivity extends AppCompatActivity {
                     Log.d(TAG, "onResponse: " + response.body());
                     if (response.isSuccessful()) {
                         AppUser appUser = response.body();
-                        Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
+
+                        // Get an instance of SharedPreferences
+                        SharedPreferences sharedPreferences = getSharedPreferences("MY_SHARED_PREF", MODE_PRIVATE);
+
+                        // Edit the shared preferences
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                        // Store a value in the shared preferences
+                        editor.putInt("user_id", (int) appUser.getId());
+                        editor.putString("user_image", appUser.getImage());
+                        // Commit the changes
+                        editor.apply();
+
+                        Toast.makeText(LoginActivity.this, String.valueOf(appUser.getId()), Toast.LENGTH_LONG).show();
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {

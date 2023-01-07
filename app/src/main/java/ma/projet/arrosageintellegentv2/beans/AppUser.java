@@ -8,6 +8,8 @@ public class AppUser {
     private String address;
     private String phone;
     private String password;
+    private String image;
+    private String email;
     List<EspaceVert> espaceVerts;
 
     public AppUser() {
@@ -35,6 +37,30 @@ public class AppUser {
                 ", password='" + password + '\'' +
                 ", role='" + role + '\'' +
                 '}';
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public List<EspaceVert> getEspaceVerts() {
+        return espaceVerts;
+    }
+
+    public void setEspaceVerts(List<EspaceVert> espaceVerts) {
+        this.espaceVerts = espaceVerts;
     }
 
     public String getUsername() {

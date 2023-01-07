@@ -15,11 +15,6 @@ public class TypePlante {
         this.id = id;
     }
 
-    private TypePlante typeplante;
-    public TypePlante getTypeplante() {
-        return typeplante;
-    }
-
     @Override
     public String toString() {
         return "TypePlante{" +

@@ -65,7 +65,7 @@ public class EspaceVertAdapter extends BaseAdapter {
         TextView id = convertView.findViewById(R.id.id);
         TextView libelle = convertView.findViewById(R.id.libelle);
         id.setText(objects.get(position).getId()+"");
-        libelle.setText("libelle : "+objects.get(position).getLibelle());
+        libelle.setText(objects.get(position).getLibelle());
         ImageView photo = convertView.findViewById(R.id.image);
         Glide
                 .with(convertView)

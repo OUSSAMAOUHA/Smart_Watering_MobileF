@@ -7,6 +7,8 @@
     <ListView
         android:id="@+id/EspacevertList"
         android:layout_width="match_parent"
+        android:divider="@color/teal_700"
+        android:dividerHeight="4px"
         android:layout_height="wrap_content">
 
 

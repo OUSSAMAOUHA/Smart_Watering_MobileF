@@ -5,12 +5,14 @@ public class Plantage {
     private String date;
     private int nombre;
     private Plante plante;
+    private PlanteServicePK pk;
 
-    public Plantage(int id, String date, int nombre, Plante plante) {
+    public Plantage(int id, String date, int nombre, Plante plante, PlanteServicePK pk) {
         this.id = id;
         this.date = date;
         this.nombre = nombre;
         this.plante = plante;
+        this.pk = pk;
     }
 
     public int getId() {
@@ -53,5 +55,13 @@ public class Plantage {
 
     public void setPlante(Plante plante) {
         this.plante = plante;
+    }
+
+    public PlanteServicePK getPk() {
+        return pk;
+    }
+
+    public void setPk(PlanteServicePK pk) {
+        this.pk = pk;
     }
 }

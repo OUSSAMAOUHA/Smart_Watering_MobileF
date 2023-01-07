@@ -1,12 +1,10 @@
 package ma.projet.arrosageintellegentv2.ui.plante;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -22,13 +20,9 @@ import java.util.List;
 import java.util.TimerTask;
 
 import ma.projet.arrosageintellegentv2.R;
-import ma.projet.arrosageintellegentv2.StatisticActivity;
-import ma.projet.arrosageintellegentv2.ZoneActivity;
-import ma.projet.arrosageintellegentv2.adapters.PlanteAdapter;
 import ma.projet.arrosageintellegentv2.beans.Plante;
 import ma.projet.arrosageintellegentv2.beans.TypePlante;
 import ma.projet.arrosageintellegentv2.databinding.FragmentPlanteBinding;
-import ma.projet.arrosageintellegentv2.ui.plante.PlanteViewModel;
 
 public class PlanteFragment extends Fragment {
 

@@ -7,25 +7,27 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_stats"
-            android:title="Dashboard" />
+            android:title="@string/dashboard" />
 
         <item
                 android:id="@+id/nav_espacevert"
                 android:icon="@drawable/ic_vert"
-                android:title="Vos espaces verts" />
+                android:title="@string/GreenSpaces" />
 
         <item
             android:id="@+id/nav_profil"
             android:icon="@drawable/ic_user"
-            android:title="Vos Informations" />
+            android:title="@string/Myprofil" />
+
         <item
             android:id="@+id/nav_plante"
             android:icon="@drawable/ic_vert"
-            android:title="Plantes" />
+            android:title="@string/plantages" />
+
 
         <item
                 android:id="@+id/logout"
                 android:icon="@drawable/ic_power"
-                android:title="Logout" />
+                android:title="@string/logout" />
     </group>
 </menu>

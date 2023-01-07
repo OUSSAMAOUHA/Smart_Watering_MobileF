@@ -1,8 +1,10 @@
 package ma.projet.arrosageintellegentv2;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -20,13 +22,17 @@ public class StatisticActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityStatisticBinding binding;
-
+    String value;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityStatisticBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        SharedPreferences sharedPreferences = getSharedPreferences("MY_SHARED_PREF", MODE_PRIVATE);
+
+        value = sharedPreferences.getString("user_image", " ");
 
         setSupportActionBar(binding.appBarStatistic.toolbar);
         binding.appBarStatistic.fab.setOnClickListener(new View.OnClickListener() {
@@ -38,10 +44,16 @@ public class StatisticActivity extends AppCompatActivity {
         });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
+
+        ImageView imgvw = (ImageView) findViewById(R.id.imageView);
+
+
+
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home,R.id.nav_profil,R.id.nav_espacevert,R.id.logout,R.id.nav_plante)
+                R.id.nav_home,R.id.nav_profil,R.id.nav_espacevert,R.id.logout, R.id.nav_plante)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_statistic);
