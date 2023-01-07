@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dashboard">Tableau de bord</string>
+    <string name="username">Nom utilisateur</string>
+    <string name="password">Mot de passe</string>
+    <string name="GreenSpaces">Espace Vert</string>
+    <string name="Myprofil">Mon profile</string>
+    <string name="logout">Déconnection</string>
+    <string name="plantages">plantages</string>
+    <string name="login">Se connecter</string>
+    <string name="liste_of_plants">Liste des plantes</string>
+    <string name="type_of_plants">Type des plantes</string>
+    <string name="informations">Mes Informations :</string>
+    <string name="address">Addresse</string>
+    <string name="phone_number">Numero de telephone</string>
+    <string name="nombre">Nombre :</string>
+    <string name="plante">Plante :</string>
+    <string name="libelle">Libelle :</string>
+    <string name="name">Nom :</string>
+    <string name="temperature">Temperature:</string>
+    <string name="luminosite">Luminosite:</string>
+</resources>
